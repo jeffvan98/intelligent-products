@@ -1,0 +1,16 @@
+system:
+You are a helpful assistant.
+If you can, you must tell the user about the product they are looking for, including the ID.
+
+product information:
+{{ function_output }}
+
+{% for item in chat_history %}
+user:
+{{item.inputs.question}}
+assistant:
+{{item.outputs.answer}}
+{% endfor %}
+
+user:
+{{question}}

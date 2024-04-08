@@ -1,0 +1,64 @@
+{
+  "package": {},
+  "code": {
+    "chat.jinja2": {
+      "type": "llm",
+      "inputs": {
+        "context": {
+          "type": [
+            "string"
+          ]
+        },
+        "chat_history": {
+          "type": [
+            "string"
+          ]
+        },
+        "question": {
+          "type": [
+            "string"
+          ]
+        }
+      },
+      "source": "chat.jinja2"
+    },
+    "ground.py": {
+      "type": "python",
+      "source": "ground.py",
+      "function": "my_python_tool"
+    },
+    "call_function.py": {
+      "type": "python",
+      "inputs": {
+        "input": {
+          "type": [
+            "object"
+          ]
+        }
+      },
+      "source": "call_function.py",
+      "function": "call_function"
+    },
+    "chat_2.jinja2": {
+      "type": "llm",
+      "inputs": {
+        "function_output": {
+          "type": [
+            "string"
+          ]
+        },
+        "chat_history": {
+          "type": [
+            "string"
+          ]
+        },
+        "question": {
+          "type": [
+            "string"
+          ]
+        }
+      },
+      "source": "chat_2.jinja2"
+    }
+  }
+}
